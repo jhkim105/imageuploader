@@ -16,7 +16,7 @@
 
   <properties>
     <java.version>1.8</java.version>
-    <imagemagick.path>C:\Program Files\ImageMagick-7.0.9-Q16</imagemagick.path>
+    <imagemagick.path>D:\bin\ImageMagick-7.0.10-29-portable-Q8-x64</imagemagick.path>
   </properties>
 
   <dependencies>
