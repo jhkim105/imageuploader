@@ -1,0 +1,25 @@
+= REST API Guide
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:operation-http-request-title: Request example
+:operation-curl-request-title: Request example(curl)
+:operation-http-response-title: Response example
+
+
+[[api]]
+= Apis
+
+[[image]]
+== Image
+
+[[image-upload]]
+=== Image Upload
+operation::upload[snippets='request-parts,response-body,response-fields']
+
+[[image-download]]
+=== Image Download
+operation::download[snippets='http-request,curl-request']
