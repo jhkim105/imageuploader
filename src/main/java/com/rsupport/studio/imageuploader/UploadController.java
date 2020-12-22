@@ -49,14 +49,18 @@ public class UploadController {
     return ResponseEntity.ok(UploadResponse.of(url));
   }
 
-  @GetMapping(value = "/**/*.jpg", produces = MediaType.IMAGE_JPEG_VALUE)
+  @GetMapping(value = {"/**/*.jpg", "/**/*.jpeg"}, produces = MediaType.IMAGE_JPEG_VALUE)
   public byte[] downloadJpg(HttpServletRequest request) {
     return getImage(request);
-
   }
 
   @GetMapping(value = "/**/*.png", produces = MediaType.IMAGE_PNG_VALUE)
   public byte[] downloadPng(HttpServletRequest request) {
+    return getImage(request);
+  }
+
+  @GetMapping(value = "/**/*.gif", produces = MediaType.IMAGE_GIF_VALUE)
+  public byte[] downloadGif(HttpServletRequest request) {
     return getImage(request);
   }
 
