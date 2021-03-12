@@ -44,7 +44,8 @@ public class UploadController {
 
     ImageMagick.resize(uploadedFile.getAbsolutePath(), imagePath);
     String url = String.format("%s/%s",
-      MvcUriComponentsBuilder.fromController(this.getClass()).scheme(multipartHttpServletRequest.getScheme()).build().toUri(), imageUri);
+      MvcUriComponentsBuilder.fromController(this.getClass())
+          .build().toUri(), imageUri);
 
     return ResponseEntity.ok(UploadResponse.of(url));
   }
